@@ -1,14 +1,4 @@
 # Docker
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'kubernetesservice'
-    command: 'apply'
-    arguments: '-f service.yml'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
-    azureSubscriptionEndpointForSecrets: 'Visual Studio Enterprise Subscription – MPN(0f3c1e44-1555-4594-a528-653b2f937eaf)'
-    azureContainerRegistry: 'kcscr.azurecr.io'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
