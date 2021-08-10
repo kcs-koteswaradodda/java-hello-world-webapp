@@ -1,8 +1,8 @@
 # Docker
+- task: Kubernetes@1
   inputs:
     connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'aks'
-    command: 
+    command: 'apply'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
 # Build and push an image to Azure Container Registry
