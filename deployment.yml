@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1 
+apiVersion: target/demo-0.0.1-SNAPSHOT.jar 
 
 kind: Deployment 
 
