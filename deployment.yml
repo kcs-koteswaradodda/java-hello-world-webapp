@@ -1,45 +1,19 @@
-apiVersion: target/demo-0.0.1-SNAPSHOT.jar 
-
-kind: Deployment 
-
-metadata: 
-
+apiVersion : apps/v1
+kind: Deployment
+metadata:
   name: shconnect-deployment 
-
-  labels: 
-
-spec: 
-
-  replicas: 2 
-
-  template: 
-
-    metadata: 
-
-      labels: 
-
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shconnect-deployment
+  template:
+    metadata:
+      labels:
         app: shconnect-deployment 
-
-    spec: 
-
-      containers: 
-
+    spec:
+      containers:
         - name: shconnect 
-
-          image: tsttst.azurecr.io/kcsakashpreethttpd:#{tag}# 
-
-          imagePullPolicy: Always 
-
-          name: shconnect-deployment 
-
-          ports: 
-
-          - containerPort: 80 
-
-      imagePullSecrets: 
-
-        - name: acr-secret 
-
- 
-
-Choose the image from ACR with repository and #{tag}# is for tagging image.
+          image: kcscr.azurecr.io/kcskoteswaradoddahttp:#{tag}#
+          ports:
+          - containerPort: 80
