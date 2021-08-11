@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: shconnect 
-          image: kcscr.azurecr.io/kcskoteswaradoddahttp:#{tag}#
+          image: kcscr.azurecr.io/kcskoteswaradoddajavahelloworldwebapp
           ports:
           - containerPort: 80
